@@ -15,10 +15,10 @@ async function getPasswordFromAPI() {
     }
     else {
         errorMessage.style.display = "block";
-        errorMessage.innerText = "You have specified an incorrect length.";
+        errorMessage.innerText = "Yanlış bir uzunluk belirlediniz";
         setTimeout(function () {
             errorMessage.style.display = "none";
-        }, 3000)
+        }, 2000)
     }
 }
 
