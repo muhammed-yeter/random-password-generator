@@ -2,19 +2,14 @@
 
 body {
     font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
     gap: 30px;
-    /* background-color: #222831; */
-    color: #252525;
+    color: #131820;
     background: linear-gradient(45deg, rgb(107, 145, 170), rgb(238, 238, 238));
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .fw-600 {
@@ -23,7 +18,7 @@ body {
 
 label {
     font-size: 17px;
-    color: #505050;
+    color: #2c333f;
 }
 
 #container {
@@ -37,22 +32,29 @@ label {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#passwordDisplayer {
+    max-width: 75%;
+    text-align: center;
+    background-color: rgb(206, 206, 206);
+    padding: 7px;
+    font-family: monospace;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
 section {
     display: flex;
     justify-content: center;
     gap: 25px;
+    max-height: 50%;
     flex-direction: column;
     padding: 50px;
 }
 
 #error-message {
-    color: white;
     font-weight: 700;
     padding: 5px;
     width: 50%;
-    border: 2px solid rgb(168, 111, 6);
-    background-color: rgb(212, 143, 15);
-    ;
 }
 
 @media screen and (max-width: 1050px) {
@@ -77,13 +79,6 @@ section {
     border-radius: 5px;
 }
 
-code {
-    background-color: rgb(206, 206, 206);
-    padding: 7px;
-    border-radius: 5px;
-    font-size: 17px;
-}
-
 #get-password {
     cursor: pointer;
     width: 150px;
@@ -105,10 +100,6 @@ code {
     font-size: 22px;
 }
 
-#length::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
 .checkbox {
     width: 25px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
@@ -117,14 +108,21 @@ code {
     cursor: pointer;
 }
 
+/* ANIMATIONS */
+.hover-shadow-resize {
+    transition: box-shadow .25s ease-out, transform .25s ease-out;
+}
+
+.hover-shadow-resize:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
 .input-container {
     display: flex;
     justify-content: start;
-    /* align-items: center; */
     gap: 10px;
 }
-
-
 
 #result-container {
     display: flex;
